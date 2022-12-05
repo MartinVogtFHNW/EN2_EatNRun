@@ -53,6 +53,7 @@ public abstract class GameObject {
 
   /**
    * Checks if objects intersects given object
+   * @param other object to test intersects on
    * @return true or false on intersect
    */
   public boolean intersects(GameObject other) {

@@ -11,7 +11,7 @@ public class GameLoop {
   public static void main(String[] args) {
     Game game = new Game(WIDTH, HEIGHT);
 
-    Window window = new Window("Eat'N'Run", WIDTH, HEIGHT);
+    Window window = new Window("Eat 'n' Run", WIDTH, HEIGHT);
     window.open();
 
     // Game loop
