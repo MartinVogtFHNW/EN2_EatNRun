@@ -4,10 +4,11 @@ import gui.Window;
 
 public class Monster extends GameObject {
 
-  private static final int PLAYER_SPEED = 5;
+  private static final int SPEED = 5;
 
   public Monster(int x, int y, int width, int height) {
     super(x, y, width, height);
+
   }
 
   @Override

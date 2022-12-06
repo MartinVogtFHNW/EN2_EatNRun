@@ -20,8 +20,16 @@ public abstract class GameObject {
     return x;
   }
 
+  public void setX(int x) {
+    this.x = x;
+  }
+
   public int getY() {
     return y;
+  }
+
+  public void setY(int y) {
+    this.y = y;
   }
 
   public int getHeight() {
@@ -58,10 +66,10 @@ public abstract class GameObject {
    */
   public boolean intersects(GameObject other) {
     return (
-      x - width / 2 < other.x + other.width / 2 &&
-      x + width / 2 > other.x - other.width / 2 &&
-      y - height / 2 < other.y + other.height / 2 &&
-      y + height / 2 > other.y - other.height / 2
+      x - width / 2 < other.x + other.width / 2 &&    // left
+      x + width / 2 > other.x - other.width / 2 &&    // right
+      y - height / 2 < other.y + other.height / 2 &&  // up
+      y + height / 2 > other.y - other.height / 2     // down
     );
   }
 }
