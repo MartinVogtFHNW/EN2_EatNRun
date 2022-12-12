@@ -177,7 +177,7 @@ Die verfügbaren Levels werden aus den Textdateien, im [`resources/maps`](./reso
 
 
 ## Abgabe der Arbeit
-Abgabetermin: **Donnerstag, 15.12.2022 23.59**.
+Abgabetermin: **Donnerstag, 17.12.2022 23.59**.
 
 Zur Abgabe müssen Sie eine anonyme Version Ihrer Lösung in der [Peergrading Webapplikation](https://www.cs.technik.fhnw.ch/peergrading/) hochladen. 
 Sie können so häufig hochladen wie Sie möchten. Die letzte Abgabe vor der Deadline wird dann bewertet.

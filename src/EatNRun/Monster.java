@@ -4,11 +4,29 @@ import gui.Window;
 
 public class Monster extends GameObject {
 
-  private static final int SPEED = 5;
+  private int vx;
+  private int vy;
 
-  public Monster(int x, int y, int width, int height) {
+  public Monster(int x, int y, int width, int height, int vx, int vy) {
     super(x, y, width, height);
+    this.vx = vx;
+    this.vy = vy;
+  }
 
+  /**
+   * Change move direction by 180°
+   */
+  public void bounceOfWall() {
+    this.vx *= -1;
+    this.vy *= -1;
+  }
+
+    /**
+   * Moves object by vx and vy value
+   */
+  public void move() {
+    setX(getX() + vx);
+    setY(getY() + vy);
   }
 
   @Override

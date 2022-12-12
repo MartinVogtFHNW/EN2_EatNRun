@@ -76,12 +76,44 @@ public class Game {
               GAME_OBJECT_SIZE
             )
           );
-          case 'N', 'E', 'S', 'W' -> monsters.add(
+          case 'N' -> monsters.add(
             new Monster(
               field * GAME_OBJECT_SIZE + SCREEN_OFFSET,
               row * GAME_OBJECT_SIZE + SCREEN_OFFSET,
               GAME_OBJECT_SIZE,
-              GAME_OBJECT_SIZE
+              GAME_OBJECT_SIZE,
+              0,
+              -5
+            )
+          );
+          case 'E' -> monsters.add(
+            new Monster(
+              field * GAME_OBJECT_SIZE + SCREEN_OFFSET,
+              row * GAME_OBJECT_SIZE + SCREEN_OFFSET,
+              GAME_OBJECT_SIZE,
+              GAME_OBJECT_SIZE,
+              5,
+              0
+            )
+          );
+          case 'S' -> monsters.add(
+            new Monster(
+              field * GAME_OBJECT_SIZE + SCREEN_OFFSET,
+              row * GAME_OBJECT_SIZE + SCREEN_OFFSET,
+              GAME_OBJECT_SIZE,
+              GAME_OBJECT_SIZE,
+              0,
+              5
+            )
+          );
+          case 'W' -> monsters.add(
+            new Monster(
+              field * GAME_OBJECT_SIZE + SCREEN_OFFSET,
+              row * GAME_OBJECT_SIZE + SCREEN_OFFSET,
+              GAME_OBJECT_SIZE,
+              GAME_OBJECT_SIZE,
+              -5,
+              0
             )
           );
         }
@@ -96,16 +128,36 @@ public class Game {
   public void handleEvents(Window window) {
     // player move
     if (window.isKeyPressed("up")) {
-        player.moveUp();
+      player.moveUp();
+      for (int wall = 0; wall < walls.size(); wall++) {
+        if (player.intersects(walls.get(wall))) {
+          player.moveDown();
+        }
+      }
     }
     if (window.isKeyPressed("down")) {
         player.moveDown();
+        for (int wall = 0; wall < walls.size(); wall++) {
+          if (player.intersects(walls.get(wall))) {
+            player.moveUp();
+          }
+        }
     }
     if (window.isKeyPressed("left")) {
         player.moveLeft();
+        for (int wall = 0; wall < walls.size(); wall++) {
+          if (player.intersects(walls.get(wall))) {
+            player.moveRight();
+          }
+        }
     }
     if (window.isKeyPressed("right")) {
         player.moveRight();
+        for (int wall = 0; wall < walls.size(); wall++) {
+          if (player.intersects(walls.get(wall))) {
+            player.moveLeft();
+          }
+        }
     }
 
     // player intersects cake
@@ -137,12 +189,26 @@ public class Game {
         }
       }
     }
+
+    // monster intersects wall
+    for (int monster = 0; monster < monsters.size(); monster++) {
+      for (int wall = 0; wall < walls.size(); wall++) {
+        if (monsters.get(monster).intersects(walls.get(wall))) {
+          monsters.get(monster).bounceOfWall();
+        }
+      }
+    }
   }
 
   /**
    * Processes a single game step
    */
-  public void step() {}
+  public void step() {
+    // move monsters
+    for (int monster = 0; monster < monsters.size(); monster++) {
+      monsters.get(monster).move();
+    }
+  }
 
   /**
    * Draws the current state of the game to the window
@@ -182,7 +248,7 @@ public class Game {
 
       window.setColor(0, 0, 0);
       window.setFontSize(50);
-      window.drawStringCentered("You LOSE!", width / 2, height / 2);
+      window.drawStringCentered("Game Over!", width / 2, height / 2);
     }
 
     // show WIN screen

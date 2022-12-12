@@ -41,22 +41,21 @@ public abstract class GameObject {
   }
 
   /**
-   * Moves object by dx and dy value
-   *
-   * @param dx the amout of pixel in x direction
-   * @param dy the amout of pixel in y direction
-   */
-  public void move(int dx, int dy) {
-    this.x += dx;
-    this.y += dy;
-  }
-
-  /**
    * Draws object to window
    */
   public void draw(Window window) {
     window.setColor(255, 0, 0);
     window.drawRect(x - width / 2, y - height / 2, width, height);
+  }
+
+  /**
+   * Move object by dx and dx value
+   * @param dx move x by dx value
+   * @param dy move y by dy value
+   */
+  public void move(int dx, int dy) {
+    this.x += dx;
+    this.y += dy;
   }
 
   /**

@@ -2,18 +2,18 @@ Game implementieren
 [x] Player      - Beginnen Sie mit der Figur Spieler: Die Figur soll erscheinen und bewegbar sein.
 [x] Finish      - Fügen Sie das Ziel hinzu: 
 [x] Finish      --> Bei Kollision mit dem Spieler soll das nächste Level geladen und dargestellt werden.
-[] Finish       --> sind alle level geschafft, soll der YOU WIN! screen angezeigt werden!
+[x] Finish       --> sind alle level geschafft, soll der YOU WIN! screen angezeigt werden!
 [x] Walls       - Fügen Sie die Hindernisse hinzu: 
-[] Walls        --> Der Spieler soll nicht durch die Hindernisse hindurchgehen können.
+[x] Walls        --> Der Spieler soll nicht durch die Hindernisse hindurchgehen können.
 [x] Cake        - Fügen Sie dann die Cakes hinzu:
-[] Cake         --> Bei Kollision mit einem Spieler soll der Kuchen verschwinden.
+[x] Cake         --> Bei Kollision mit einem Spieler soll der Kuchen verschwinden.
 [x] Monster     - Fügen Sie dann die Monster hinzu:
-[] Monster      --> Bei Kollision mit einem Spieler soll der Spieler ein Leben verlieren.
-[] Monster      - Bewegen Sie die Monster:
-[] Monster      --> Bei Kollision mit einer Wand soll sich die Bewegungsrichtung des Monsters um 180 Grad drehen.
+[x] Monster      --> Bei Kollision mit einem Spieler soll der Spieler ein Leben verlieren.
+[x] Monster      - Bewegen Sie die Monster:
+[x] Monster      --> Bei Kollision mit einer Wand soll sich die Bewegungsrichtung des Monsters um 180 Grad drehen.
 [x] Map         - Auslesen der Positionen der Spielelemente aus den Level-Textdateien.
 [x] Map         --> Level zeichnen bassierend auf der Level-Textdatei
-[] Map          --> Level anhand Anzahl der Textdateien lesen
+[x] Map          --> Level anhand Anzahl der Textdateien lesen
 
 Struktur analysieren und UML Klassendiagramm zeichnen
 [] UML      - Alle selbst geschriebenen Klassen, Enums und Interfaces und deren Vererbungsbeziehungen müssen ersichtlich sein.
