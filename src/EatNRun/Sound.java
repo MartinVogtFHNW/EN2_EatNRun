@@ -1,4 +1,4 @@
-package ch.fhnw.oop1.eatnrun.util;
+package EatNRun;
 
 import java.io.File;
 import java.util.concurrent.CountDownLatch;

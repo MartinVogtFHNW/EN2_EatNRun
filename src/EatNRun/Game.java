@@ -165,6 +165,7 @@ public class Game {
       if (cakes.get(cake).intersects(player)) {
         playerCakes++;
         cakes.remove(cake);
+        Sound.playSound(Sound.SLURP);
       }
     }
 
@@ -175,6 +176,7 @@ public class Game {
         loadLevel(level);
       } else {
         won = true;
+        Sound.playSound(Sound.SUCCESS);
       }
     }
 
@@ -184,8 +186,10 @@ public class Game {
         if (playerLifes > 1) {
           playerLifes--;
           player.resetToStart();
+          Sound.playSound(Sound.DIE);
         } else {
           lost = true;
+          Sound.playSound(Sound.GAME_OVER);
         }
       }
     }
