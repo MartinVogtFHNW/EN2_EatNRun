@@ -2,10 +2,10 @@ package EatNRun;
 
 import EatNRun.game_objects.Cake;
 import EatNRun.game_objects.Finish;
-import EatNRun.game_objects.Level;
 import EatNRun.game_objects.Monster;
 import EatNRun.game_objects.Player;
 import EatNRun.game_objects.Wall;
+import EatNRun.util.Level;
 import EatNRun.util.Sound;
 import EatNRun.view.Score;
 import EatNRun.view.Screen;
@@ -19,7 +19,7 @@ public class Game {
   private int level = 1;
   private int levels;
   private int playerLives = 5;
-  private int playerCakes;
+  private int playerCakes = 0;
   private boolean won = false;
   private boolean lost = false;
 
@@ -43,7 +43,7 @@ public class Game {
    * load level and create game objects
    * @param level
    */
-  public void loadLevel(int level) {
+  private void loadLevel(int level) {
     String[] map = Level.loadMatrixFromTextFile(level);
 
     walls = new ArrayList<Wall>();

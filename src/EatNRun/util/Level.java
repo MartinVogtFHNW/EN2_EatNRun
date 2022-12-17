@@ -1,4 +1,4 @@
-package EatNRun.game_objects;
+package EatNRun.util;
 
 import java.io.IOException;
 import java.nio.file.Files;
