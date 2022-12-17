@@ -23,8 +23,15 @@ public class Game {
   private boolean won = false;
   private boolean lost = false;
 
-  private final int GAME_RASTER_SIZE = 40;
-  private final int SCREEN_OFFSET = 20;
+  /**
+   * Game raster size in pixels
+   */
+  private final int GRS = 40; // game raster size
+
+  /**
+   * Screen offset in pixels
+   */
+  private final int SOT = 20; // screen offset
 
   public Game() {
     levels = Level.getNumberOfLevels();
@@ -53,59 +60,21 @@ public class Game {
     for (int row = 0; row < map.length; row++) {
       for (int field = 0; field < map[row].length(); field++) {
         switch (map[row].charAt(field)) {
-          case '#' -> walls.add(
-            new Wall(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET
-            )
-          );
-          case 'P' -> player =
-            new Player(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET
-            );
-          case 'F' -> finish =
-            new Finish(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET
-            );
-          case 'C' -> cakes.add(
-            new Cake(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET
-            )
-          );
+          case '#' -> walls.add(new Wall(field * GRS + SOT, row * GRS + SOT));
+          case 'P' -> player = new Player(field * GRS + SOT, row * GRS + SOT);
+          case 'F' -> finish = new Finish(field * GRS + SOT, row * GRS + SOT);
+          case 'C' -> cakes.add(new Cake(field * GRS + SOT, row * GRS + SOT));
           case 'N' -> monsters.add(
-            new Monster(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              0,
-              -4
-            )
+            new Monster(field * GRS + SOT, row * GRS + SOT, 0, -4)
           );
           case 'E' -> monsters.add(
-            new Monster(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              4,
-              0
-            )
+            new Monster(field * GRS + SOT, row * GRS + SOT, 4, 0)
           );
           case 'S' -> monsters.add(
-            new Monster(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              0,
-              4
-            )
+            new Monster(field * GRS + SOT, row * GRS + SOT, 0, 4)
           );
           case 'W' -> monsters.add(
-            new Monster(
-              field * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              row * GAME_RASTER_SIZE + SCREEN_OFFSET,
-              -4,
-              0
-            )
+            new Monster(field * GRS + SOT, row * GRS + SOT, -4, 0)
           );
         }
       }
