@@ -4,8 +4,8 @@ import gui.Window;
 
 public class Finish extends GameObject {
 
-  Finish(int x, int y, int width, int height) {
-    super(x, y, width, height);
+  Finish(int x, int y) {
+    super(x, y);
   }
 
   @Override

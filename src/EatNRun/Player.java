@@ -6,12 +6,14 @@ import gui.Window;
 
 public class Player extends GameObject {
 
+  private static final int PLAYER_HEIGHT = 30;
+  private static final int PLAYER_WIDTH = 20;
   private static final int SPEED = 5;
   private int startX;
   private int startY;
 
-  public Player(int x, int y, int width, int height) {
-    super(x, y, width, height);
+  public Player(int x, int y) {
+    super(x, y, PLAYER_WIDTH, PLAYER_HEIGHT);
     this.startX = x;
     this.startY = y;
   }

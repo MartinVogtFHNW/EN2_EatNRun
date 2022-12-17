@@ -7,8 +7,8 @@ public class Monster extends GameObject {
   private int vx;
   private int vy;
 
-  public Monster(int x, int y, int width, int height, int vx, int vy) {
-    super(x, y, width, height);
+  public Monster(int x, int y, int vx, int vy) {
+    super(x, y);
     this.vx = vx;
     this.vy = vy;
   }

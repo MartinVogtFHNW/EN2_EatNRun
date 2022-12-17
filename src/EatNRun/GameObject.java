@@ -9,11 +9,20 @@ public abstract class GameObject {
   private int width;
   private int height;
 
+  private static final int GAME_OBJECT_DEFAULT_SIZE = 40;
+
   public GameObject(int x, int y, int width, int height) {
     this.x = x;
     this.y = y;
     this.width = width;
     this.height = height;
+  }
+
+  public GameObject(int x, int y) {
+    this.x = x;
+    this.y = y;
+    this.width = GAME_OBJECT_DEFAULT_SIZE;
+    this.height = GAME_OBJECT_DEFAULT_SIZE;
   }
 
   public int getX() {

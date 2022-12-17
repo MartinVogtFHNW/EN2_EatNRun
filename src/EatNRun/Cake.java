@@ -4,8 +4,8 @@ import gui.Window;
 
 public class Cake extends GameObject {
 
-  Cake(int x, int y, int width, int height) {
-    super(x, y, width, height);
+  Cake(int x, int y) {
+    super(x, y);
   }
 
   @Override

@@ -9,7 +9,7 @@ public class GameLoop {
   private static final int CLEAR_SCREEN_TIME_MS = 20;
 
   public static void main(String[] args) {
-    Game game = new Game(WIDTH, HEIGHT);
+    Game game = new Game();
 
     Window window = new Window("Eat 'n' Run", WIDTH, HEIGHT);
     window.open();
