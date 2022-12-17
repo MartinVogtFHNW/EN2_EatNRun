@@ -14,7 +14,7 @@ Game implementieren
 [x] Map         - Auslesen der Positionen der Spielelemente aus den Level-Textdateien.
 [x] Map         --> Level zeichnen bassierend auf der Level-Textdatei
 [x] Map          --> Level anhand Anzahl der Textdateien lesen
-[] Sound	    - Sound dateien Abspieln bei den verschiedenen Aktionen
+[x] Sound	    - Sound dateien Abspieln bei den verschiedenen Aktionen
 
 Struktur analysieren und UML Klassendiagramm zeichnen
 [] UML      - Alle selbst geschriebenen Klassen, Enums und Interfaces und deren Vererbungsbeziehungen müssen ersichtlich sein.

@@ -1,4 +1,4 @@
-package EatNRun;
+package EatNRun.game_objects;
 
 import gui.Window;
 
@@ -74,10 +74,10 @@ public abstract class GameObject {
    */
   public boolean intersects(GameObject other) {
     return (
-      x - width / 2 < other.x + other.width / 2 &&    // left
-      x + width / 2 > other.x - other.width / 2 &&    // right
-      y - height / 2 < other.y + other.height / 2 &&  // up
-      y + height / 2 > other.y - other.height / 2     // down
+      x - width / 2 < other.x + other.width / 2 && // left
+      x + width / 2 > other.x - other.width / 2 && // right
+      y - height / 2 < other.y + other.height / 2 && // up
+      y + height / 2 > other.y - other.height / 2 // down
     );
   }
 }

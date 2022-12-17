@@ -30,10 +30,6 @@ public class Screen {
 
     window.setColor(0, 0, 0);
     window.setFontSize(50);
-    window.drawStringCentered(
-      message,
-      screenWith / 2,
-      screenHeight / 2
-    );
+    window.drawStringCentered(message, screenWith / 2, screenHeight / 2);
   }
 }

@@ -1,10 +1,10 @@
-package EatNRun;
+package EatNRun.game_objects;
 
 import gui.Window;
 
 public class Wall extends GameObject {
 
-  Wall(int x, int y) {
+  public Wall(int x, int y) {
     super(x, y);
   }
 

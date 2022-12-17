@@ -1,10 +1,10 @@
-package EatNRun;
+package EatNRun.game_objects;
 
 import gui.Window;
 
 public class Finish extends GameObject {
 
-  Finish(int x, int y) {
+  public Finish(int x, int y) {
     super(x, y);
   }
 

@@ -1,10 +1,11 @@
-package EatNRun;
+package EatNRun.game_objects;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Level {
+
   /**
    * reads level from file
    * @param level number of leve to load
@@ -19,18 +20,19 @@ public class Level {
       throw new RuntimeException(iox);
     }
   }
-  
+
   /**
    * get loadable levels from file
    * @return array of levelnames available
    */
   public static int getNumberOfLevels() {
     try {
-        return (int) Files.list(Paths.get("resources", "maps"))
-            .filter(p -> p.toFile().getName().endsWith(".txt"))
-            .count();
+      return (int) Files
+        .list(Paths.get("resources", "maps"))
+        .filter(p -> p.toFile().getName().endsWith(".txt"))
+        .count();
     } catch (IOException e) {
-       throw new RuntimeException(e);
+      throw new RuntimeException(e);
     }
-}
+  }
 }

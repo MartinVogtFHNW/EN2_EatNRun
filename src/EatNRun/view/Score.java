@@ -4,16 +4,16 @@ import gui.Window;
 
 public class Score {
 
-    public static int OFFSET_TOP = 30;
+  public static int OFFSET_TOP = 30;
 
-    /**
-     * Display game score centered on top
-     * @param window 
-     * @param screenWith width of game window in pixel
-     * @param playerCakes number of cakes player has
-     * @param playerLives number of lives player has
-     * @param currentLevel current level
-     */
+  /**
+   * Display game score centered on top
+   * @param window
+   * @param screenWith width of game window in pixel
+   * @param playerCakes number of cakes player has
+   * @param playerLives number of lives player has
+   * @param currentLevel current level
+   */
   public static void draw(
     Window window,
     int screenWith,

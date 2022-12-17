@@ -16,15 +16,9 @@ public class GameLoop {
 
     // Game loop
     while (window.isOpen()) {
-      // User input
       game.handleEvents(window);
-
-      // Game step
       game.step();
-
-      // Draw game state
       game.drawGame(window);
-
       window.refreshAndClear(CLEAR_SCREEN_TIME_MS);
     }
   }

@@ -1,5 +1,11 @@
 package EatNRun;
 
+import EatNRun.game_objects.Cake;
+import EatNRun.game_objects.Finish;
+import EatNRun.game_objects.Level;
+import EatNRun.game_objects.Monster;
+import EatNRun.game_objects.Player;
+import EatNRun.game_objects.Wall;
 import EatNRun.util.Sound;
 import EatNRun.view.Score;
 import EatNRun.view.Screen;
@@ -203,7 +209,6 @@ public class Game {
    * Draws the current state of the game to the window
    */
   public void drawGame(Window window) {
-    
     // draw player
     player.draw(window);
 

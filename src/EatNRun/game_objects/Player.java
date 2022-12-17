@@ -1,6 +1,4 @@
-package EatNRun;
-
-import java.util.ArrayList;
+package EatNRun.game_objects;
 
 import gui.Window;
 

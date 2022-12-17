@@ -1,10 +1,10 @@
-package EatNRun;
+package EatNRun.game_objects;
 
 import gui.Window;
 
 public class Cake extends GameObject {
 
-  Cake(int x, int y) {
+  public Cake(int x, int y) {
     super(x, y);
   }
 

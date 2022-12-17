@@ -1,4 +1,4 @@
-package EatNRun;
+package EatNRun.game_objects;
 
 import gui.Window;
 
@@ -21,7 +21,7 @@ public class Monster extends GameObject {
     this.vy *= -1;
   }
 
-    /**
+  /**
    * Moves object by vx and vy value
    */
   public void move() {
